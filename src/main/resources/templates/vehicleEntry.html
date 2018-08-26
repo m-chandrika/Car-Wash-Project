@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting started: handling form submission</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <h1>Vehicle Details Entry Form</h1>
+  <form action="#" th:action="@{/vehicleEntry}" th:object="${vehicleEntry}" method="post">
+  <p>Enter 'Car' if the Vehicle Type is Car and 'Truck' if the Vehicle Type is Truck</p>
+  <p>Vehicle Type: <input type="text" th:field="*{vtype}" /></p>
+  <p>Vehicle License: <input type="text" th:field="*{id}" /></p>
+   <p>Does your Vehicle has Mud? Yes or No <input type="text" th:field="*{isMud}" /></p>
+   <p>Is your truck bed is down? Yes or No <input type="text" th:field="*{bedStatus}" /></p>
+  <p><input type="submit" value="Submit" /> <input type="reset" value ="Reset" />   
+  </form>
+</body>
+</html>
+
